@@ -1,17 +1,17 @@
-[ARDUINO GPIO PINOUT]			[BLUEPILL PINOUT]				[NODEMCU GPIO PINOUT]
-D0 = 0	A0 = 14		PA0 = 0	PB0 = 16	PC13 = 32		D0 = 16
-D1 = 1	A1 = 15		PA1 = 1	PB1 = 17	PC14 = 33		D1 = 5
-D2 = 2	A2 = 16		PA2 = 2	PB2 = 18	PC15 = 34		D2 = 4
-D3 = 3	A3 = 17		PA3 = 3	PB3 = 19			D3 = 0
-D4 = 4	A4 = 18		PA4 = 4	PB4 = 20			D4 = 2
-D5 = 5	A5 = 19		PA5 = 5	PB5 = 21			D5 = 14
-D6 = 6	A6 = 20		PA6 = 6	PB6 = 22			D6 = 12
-D7 = 7	A7 = 21		PA7 = 7	PB7 = 23			D7 = 13
-D8 = 8			PA8 = 8	PB8 = 24			D8 = 15
-D9 = 9			PA9 = 9	PB9 = 25			D9 = 3
-D10 = 10			PA10 = 10	PB10 = 26			D10 = 1
-D11 = 11			PA11 = 11	PB11 = 27			
-D12 = 12			PA12 = 12	PB12 = 28			
-D13 = 13			PA13 = 13	PB13 = 29			
-			PA14 = 14	PB14 = 30			
-			PA15 = 15	PB15 = 31			
+[ARDUINO GPIO PINOUT]	[BLUEPILL PINOUT]		[NODEMCU GPIO PINOUT]
+D0 = 0	A0 = 14		PA0 = 0	  PB0 = 16  PC13 = 32	D0 = 16
+D1 = 1	A1 = 15		PA1 = 1	  PB1 = 17  PC14 = 33	D1 = 5
+D2 = 2	A2 = 16		PA2 = 2	  PB2 = 18  PC15 = 34	D2 = 4
+D3 = 3	A3 = 17		PA3 = 3	  PB3 = 19		D3 = 0
+D4 = 4	A4 = 18		PA4 = 4	  PB4 = 20		D4 = 2
+D5 = 5	A5 = 19		PA5 = 5	  PB5 = 21		D5 = 14
+D6 = 6	A6 = 20		PA6 = 6	  PB6 = 22		D6 = 12
+D7 = 7	A7 = 21		PA7 = 7	  PB7 = 23		D7 = 13
+D8 = 8			PA8 = 8	  PB8 = 24		D8 = 15
+D9 = 9			PA9 = 9	  PB9 = 25		D9 = 3
+D10 = 10		PA10 = 10 PB10 = 26		D10 = 1
+D11 = 11		PA11 = 11 PB11 = 27			
+D12 = 12		PA12 = 12 PB12 = 28			
+D13 = 13		PA13 = 13 PB13 = 29			
+			PA14 = 14 PB14 = 30			
+			PA15 = 15 PB15 = 31			
