@@ -1,4 +1,4 @@
-/********************************
+/*******************************************************************************
     #define ARDUINO
     #define BLUEPILL
     #define NODEMCU
@@ -9,29 +9,29 @@
     #endif
     #ifdef BLUEPILL
         #define Pins and Funcs()
-        #include <def.h>
-    #endif
+        #include <abc.h>
+    #endif   
     #ifdef
         #define Pins and Funcs()
-        #include <ghi.h>
+        #include <abc.h>
     #endif
 ********************************************************************************
     Adruino : 1~13, A0~A7
     STM32   : PA0~PA15, PB0~PB15, PC0~PC15
     ESP8266 : D0~D10(D0=16, D1=5, D2=4, D3=0, D4=2, D5=14, D6=12, D7=13, D8=15,
 ********************************************************************************/
-//#define ARDUINO
-#define BLUEPILL
-//#define NODEMCU
+//#define ARDUINO 
+//#define BLUEPILL  
+#define NODEMCU         
 
 #ifdef ARDUINO
-  #define ledPin 13  
-#endif  
-#ifdef BLUEPILL
-  #define ledPin PC13   // 32
+    #define ledPin 13
 #endif
+#ifdef BLUEPILL
+    #define ledPin PC13 
+#endif    
 #ifdef NODEMCU
-  #define ledPin D4     // 2
+    #define ledPin 2
 #endif
 
 unsigned int cnt;
@@ -41,13 +41,13 @@ void setup() {
     pinMode(ledPin, OUTPUT);
 }
 
-void loop() {
+void loop()
+{
     digitalWrite(ledPin, HIGH);
     delay(1000);
     digitalWrite(ledPin, LOW);
     delay(1000);
 
-    Serial.print(cnt); Serial.print(" >> "); 
-    Serial.print("Pin No : "); Serial.println(ledPin);
+    Serial.print(cnt); Serial.print(" >> GPIO: "); Serial.println(ledPin);
     cnt++;
 }
