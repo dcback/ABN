@@ -1,4 +1,4 @@
-/*********************************
+/******************************************************************************************
     #define ARDUINO_NANO
     #define BLUEPILL
     #define NODEMCU
@@ -6,12 +6,10 @@
     #ifdef ARDUINO_NANO
         #define Pins and Funcs()
         #include <abc.h>
-    #endif
-    #ifdef BLUEPILL
+    #elif defined BLUEPILL
         #define Pins and Funcs()
         #include <abc.h>
-    #endif
-    #ifdef
+    #else //NODEMCU
         #define Pins and Funcs()
         #include <abc.h>
     #endif
@@ -26,11 +24,9 @@
 
 #ifdef ARDUINO_NANO
     #define ledPin 13
-#endif
-#ifdef BLUEPILL
+#elif defined BLUEPILL
     #define ledPin PC13
-#endif
-#ifdef NODEMCU
+#else //NODEMCU
     #define ledPin 2
 #endif
 
