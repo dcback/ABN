@@ -1,15 +1,15 @@
 /******************************************
     I2C    Arduino  STM32F103  ESP8266
-    SDA      4         PB7     D2(GPIO4)
-    SCL      5         PB6     D1(GPIO5)
+    SDA      A4        PB7     D2(GPIO4)
+    SCL      A5        PB6     D1(GPIO5)
 *******************************************/
-#define ARDUINO_NANO
-//#define BLUEPILL
+//#define ARDUINO_NANO
+#define BLUEPILL
 //#define NODEMCU
 
 #ifdef ARDUINO_NANO
-    #define SDA 4
-    #define SCL 5
+    #define SDA A4
+    #define SCL A5
 #elif defined BLUEPILL
     #define SDA PB7
     #define SCL PB6
