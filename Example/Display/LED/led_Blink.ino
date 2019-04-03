@@ -2,15 +2,16 @@
     #define ARDUINO_NANO
     #define BLUEPILL
     #define NODEMCU
+
     #ifdef ARDUINO_NANO
         #define Pins and Funcs()
-        #include <abc.h>
+        #include <aaa.h>
     #elif defined BLUEPILL
         #define Pins and Funcs()
-        #include <abc.h>
+        #include <bbb.h>
     #else //NODEMCU
         #define Pins and Funcs()
-        #include <abc.h>
+        #include <ccc.h>
     #endif
 *******************************************************************************************
     Adruino : 1~13, A0~A7(14~21)
