@@ -1,15 +1,15 @@
 /******************************************
     I2C    Arduino  STM32F103  ESP8266    
-    SDA      A4        PB7     D2(GPIO4)     
-    SCL      A5        PB6     D1(GPIO5)     
+    SDA      4         PB7     D2(GPIO4)     
+    SCL      5         PB6     D1(GPIO5)     
 *******************************************/
-//#define ARDUINO_NANO
+#define ARDUINO_NANO
 //#define BLUEPILL
-#define NODEMCU
+//#define NODEMCU         // LCD VCC : 3V -> 5V
 
 #ifdef ARDUINO_NANO
-    #define SDA A4
-    #define SCL A5
+    #define SDA 4
+    #define SCL 5
 #elif defined BLUEPILL
     #define SDA PB7
     #define SCL PB6
@@ -29,8 +29,8 @@ void setup() {
 
     lcd.setCursor(3, 0);
     lcd.print("Hello, world!");
-    lcd.setCursor(2, 1);
-    lcd.print("Ywrobot Arduino!");
+    lcd.setCursor(1, 1);
+    lcd.print("DC Back's Arduino!");
     lcd.setCursor(0, 2);
     lcd.print("Arduino LCM IIC 2019");
     lcd.setCursor(2, 3);
