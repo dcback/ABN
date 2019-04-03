@@ -8,14 +8,14 @@
 //#define NODEMCU
 
 #ifdef ARDUINO_NANO
-    #define DIO A1
+    #define DIO A1  
     #define CLK A0
 #elif defined BLUEPILL
-    #define DIO PB1
-    #define CLK PB0
+    #define DIO PA1
+    #define CLK PA0
 #else //NODEMCU
-    #define DIO D10
-    #define CLK D9
+    #define DIO D1
+    #define CLK D0
 #endif
 
 #include <TM1637.h>
