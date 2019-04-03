@@ -4,8 +4,8 @@
     SCL      A5        PB6     D1(GPIO5)
 *******************************************/
 //#define ARDUINO_NANO
-#define BLUEPILL
-//#define NODEMCU
+//#define BLUEPILL
+#define NODEMCU         // LCD VCC : 3V -> 5V
 
 #ifdef ARDUINO_NANO
     #define SDA A4
