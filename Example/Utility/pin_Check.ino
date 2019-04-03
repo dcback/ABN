@@ -2,6 +2,7 @@
     #define ARDUINO_NANO
     #define BLUEPILL
     #define NODEMCU
+
     #ifdef ARDUINO_NANO
         #define Pins and Funcs()
         #include <aaa.h>
