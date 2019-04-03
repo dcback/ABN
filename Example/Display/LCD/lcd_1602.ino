@@ -1,8 +1,8 @@
-/******************************************
-    I2C    Arduino  STM32F103  ESP8266
-    SDA      A4        PB7     D2(GPIO4)
-    SCL      A5        PB6     D1(GPIO5)
-*******************************************/
+/********************************************
+    [I2C]    ATm328P   STM32F103  ESP8266
+    SDA      A4        PB7        D2(GPIO4)
+    SCL      A5        PB6        D1(GPIO5)
+*********************************************/
 //#define ARDUINO_NANO
 //#define BLUEPILL
 #define NODEMCU         // LCD VCC : 3V -> 5V
