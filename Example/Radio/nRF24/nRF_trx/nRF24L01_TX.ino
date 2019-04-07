@@ -34,7 +34,7 @@
 #include <SPI.h>
 
 RF24 radio(CE, CSN);    // CE, CSN
-const byte addresses[][6] = {"00001", "00002"};
+const byte addresses[][6] = { "00001", "00002", "00003", "00004", "00005" };
 int rxValue = 0;
 int txValue = 1234;
 
@@ -43,8 +43,8 @@ void setup() {
     pinMode(ledPin, OUTPUT);
 
     radio.begin();
-    radio.openWritingPipe(addresses[1]);      // 00001
-    radio.openReadingPipe(1, addresses[0]);   // 00002
+    radio.openWritingPipe(addresses[1]);    // openWritingPipe(Pipe open WR_addr):WR[1]<->RD[0]
+    radio.openReadingPipe(5, addresses[0]); // openReadingPipe(pipeNo[1~5], Pipe open RD_addr):RD[0]<->WR[1]
     radio.setPALevel(RF24_PA_MIN);
 
     Serial.println(F(">>> TX Start.."));
