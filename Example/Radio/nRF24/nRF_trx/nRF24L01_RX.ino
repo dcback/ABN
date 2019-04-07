@@ -8,8 +8,8 @@
     CE          D9(9)       PC14        D0(GPIO16)
     VCC         3.3V        3.3V        3.3V
 ****************************************************/
-#define ARDUINO_NANO
-//#define BLUEPILL
+//#define ARDUINO_NANO
+#define BLUEPILL
 //#define NODEMCU
 
 #ifdef ARDUINO_NANO
@@ -34,7 +34,7 @@
 #include <SPI.h>
 
 RF24 radio(CE, CSN);    // CE, CSN
-const byte addresses[][6] = {"00001", "00002"};
+const byte addresses[][6] = { "00001", "00002", "00003", "00004", "00005" };
 int rxValue = 0;
 int txValue = 4321;
 
@@ -43,8 +43,8 @@ void setup() {
     pinMode(ledPin, OUTPUT);
 
     radio.begin();
-    radio.openWritingPipe(addresses[0]);    // 00002
-    radio.openReadingPipe(1, addresses[1]); // 00001
+    radio.openWritingPipe(addresses[0]);    // openWritingPipe(Pipe open WR_addr):WR[0]<->RD[1]
+    radio.openReadingPipe(5, addresses[1]); // openReadingPipe(pipeNo[1~5], Pipe open RD_addr):RD[1]<->WR[0]
     radio.setPALevel(RF24_PA_MIN);
 
     Serial.println(F(">>> RX Start.."));
