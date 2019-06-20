@@ -35,8 +35,8 @@
 
 RF24 radio(CE, CSN);    // CE, CSN
 const byte addresses[][6] = { "00001", "00002", "00003", "00004", "00005" };
-int rxValue = 0;
-int txValue = 4321;
+char rxValue[100] = "";
+char txValue[100] = "RX4321";
 
 void setup() {
     Serial.begin(115200);
