@@ -8,9 +8,9 @@
     CE          D9(9)       PC14        D0(GPIO16)
     VCC         3.3V        3.3V        3.3V
 ****************************************************/
-#define ARDUINO_NANO
+//#define ARDUINO_NANO
 //#define BLUEPILL
-//#define NODEMCU
+#define NODEMCU
 
 #ifdef ARDUINO_NANO
     #include <nRF24L01.h>
@@ -39,12 +39,12 @@ int rxValue = 0;
 int txValue = 1234;
 
 void setup() {
-    Serial.begin(9600);
+    Serial.begin(115200);
     pinMode(ledPin, OUTPUT);
 
     radio.begin();
     radio.openWritingPipe(addresses[1]);    // openWritingPipe(Pipe open WR_addr):WR[1]<->RD[0]
-    radio.openReadingPipe(5, addresses[0]); // openReadingPipe(pipeNo[1~5], Pipe open RD_addr):RD[0]<->WR[1]
+    radio.openReadingPipe(1, addresses[0]); // openReadingPipe(pipeNo[1~5], Pipe open RD_addr):RD[0]<->WR[1]
     radio.setPALevel(RF24_PA_MIN);
 
     Serial.println(F(">>> TX Start.."));
