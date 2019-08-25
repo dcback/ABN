@@ -20,27 +20,28 @@
    ESP8266 : D0~D10(D0=16, D1=5, D2=4, D3=0, D4=2, D5=14, D6=12, D7=13, 
              D8=15, D9=3, D10=1)
 **************************************************************************/
-#define NANO
-//#define BLUEPILL
-//#define NODEMCU
- 
-#ifdef NANO
-#define ledPin 13
-#elif defined BLUEPILL
-#define ledPin PC13
-#else //NODEMCU
-#define ledPin D4
+#define NANO        // NANO 보드인 경우 define
+//#define BLUEPILL  // BLUEPILL 보드인 경우 define
+//#define NODEMCU   // NODEMCU 보드인 경우 define
+
+#ifdef NANO            // NANO 보드인 경우
+#define ledPin 13      // ledPin을 13핀 으로 정의한다
+#elif defined BLUEPILL // BLUEPILL 보드인 경우
+#define ledPin PC13    // ledPin을 PC13핀 으로 정의한다
+#else                  // NANO, BLUEPILL도 아닌 경우(NODEMCU인 경우)
+#define ledPin D4      // ledPin을 D4핀 으로 정의한다
 #endif
- 
+
+/* 최초 한번만 실행 */
 void setup()
 {
-   pinMode(ledPin, OUTPUT);
+    pinMode(ledPin, OUTPUT); // ledPin핀을 출력으로 정의
 }
- 
+
 void loop()
 {
-   digitalWrite(ledPin, HIGH);
-   delay(1000);
-   digitalWrite(ledPin, LOW);
-   delay(1000);
+    digitalWrite(ledPin, HIGH); // ledPin핀 출력을 HIGH
+    delay(1000);                // 1000ms(1초) 지연(유지)
+    digitalWrite(ledPin, LOW);  // ledPin핀 출력을 LOW
+    delay(1000);                // 1000ms(1초) 지연(유지)
 }
