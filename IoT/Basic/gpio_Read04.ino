@@ -1,20 +1,13 @@
-/**************************************************************************
-    Adruino : 1~13, A0~A7(A0=14, A1=15, A2=16, A3=17, A4=18, A5=19, A6=20,
-              A7=21)
-    STM32   : PA0~PA15(0~15), PB0~PB15(16~31), PC13~PC15(32~34)
-    ESP8266 : D0~D10(D0=16, D1=5, D2=4, D3=0, D4=2, D5=14, D6=12, D7=13,
-              D8=15), A0
-**************************************************************************/
 #define NANO        // NANO 보드인 경우 define
 //#define BLUEPILL  // BLUEPILL 보드인 경우 define
 
-#ifdef NANO
-#define cdsPin A7
-#endif
+#ifdef NANO         // NANO가 정의되면
+#define cdsPin A7   // cdsPin을 A7으로 하고 
+#endif              // #ifdef 사용 후 반드시 #endif
 
-#ifdef BLUEPILL
-#define cdsPin PA1
-#endif
+#ifdef BLUEPILL     // BLUEPILL이 정의되면
+#define cdsPin PA1  // cdsPin을 PA1으로 하고
+#endif              // #ifdef 사용 후 반드시 #endif
  
 void setup()
 {
