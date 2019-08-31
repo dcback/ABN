@@ -5,9 +5,9 @@
     ESP8266 : D0~D10(D0=16, D1=5, D2=4, D3=0, D4=2, D5=14, D6=12, D7=13,
               D8=15), A0
 **************************************************************************/
-//#define NANO        // NANO 보드인 경우 define
+#define NANO        // NANO 보드인 경우 define
 //#define BLUEPILL  // BLUEPILL 보드인 경우 define
-#define NODEMCU   // NODEMCU 보드인 경우 define
+//#define NODEMCU   // NODEMCU 보드인 경우 define
 
 #ifdef NANO
 #define potPin A6
