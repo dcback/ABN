@@ -1,9 +1,9 @@
-#define NANO      // NANO 보드인 경우 define
-//#define BLUEPILL    // BLUEPILL 보드인 경우 define
+#define NANO        // NANO 보드인 경우 define
+//#define BLUEPILL  // BLUEPILL 보드인 경우 define
 //#define NODEMCU   // NODEMCU 보드인 경우 define
 
 #ifdef NANO         // NANO가 정의되면
-#define pirPin A3   // pirPin을 A7로 하고 
+#define pirPin A3   // pirPin을 A3로 하고 
 #endif              // #ifdef 사용 후 반드시 #endif
 
 #ifdef BLUEPILL     // BLUEPILL이 정의되면
