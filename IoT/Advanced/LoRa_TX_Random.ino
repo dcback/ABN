@@ -68,7 +68,7 @@ void loop()
     int randVal3 = random(10, 100);
     int randVal4 = random(10, 100);
 
-    // buf에 센싱 값 저장
+    // buf에 Random값 문자열로 저장
     sprintf(buf, ">>>[%d %d %d %d %d]", randVal0, randVal1, randVal2, randVal3, randVal4);
     Serial.println(buf);
 
