@@ -12,7 +12,7 @@
 
 int counter = 0;
 bool ledStatus = HIGH;
-char buf[100];
+char buf[100];      // 문자열 버퍼 정의
 
 #define NANO        // NANO 보드인 경우 define
 //#define BLUEPILL  // BLUEPILL 보드인 경우 define
